@@ -1,0 +1,23 @@
+{
+  "name": "flashloan-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@aave/core-v3": "^1.19.3",
+    "@nomicfoundation/hardhat-ethers": "^3.1.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^16.6.1",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.26.3"
+  },
+  "dependencies": {
+    "@bgd-labs/aave-address-book": "^4.27.0"
+  }
+}

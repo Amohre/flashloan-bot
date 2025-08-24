@@ -1,0 +1,18 @@
+const hre = require("hardhat");
+require("dotenv").config();
+
+async function main() {
+  const [deployer] = await hre.ethers.getSigners();
+  console.log("Deployer:", await deployer.getAddress());
+  console.log("Balance (wei):", (await hre.ethers.provider.getBalance(deployer.address)).toString());
+
+  const Factory = await hre.ethers.getContractFactory("FlashLoan");
+  const contract = await Factory.deploy(deployer.address); // include constructor arg only if your contract needs it
+  await contract.waitForDeployment();
+  console.log("Deployed at:", await contract.getAddress());
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exitCode = 1;
+});
