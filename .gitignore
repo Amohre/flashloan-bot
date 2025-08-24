@@ -1,22 +1,16 @@
-node_modules
-.env
-
-# Hardhat files
-/cache
-/artifacts
-
-# TypeChain files
-/typechain
-/typechain-types
-
-# solidity-coverage files
-/coverage
-/coverage.json
-
-# Hardhat Ignition default folder for deployments against a local node
-ignition/deployments/chain-31337
+# Node / Hardhat
 node_modules/
-artifacts/
 cache/
+artifacts/
+typechain/
+coverage/
+coverage.json
+
+# Env & local config
 .env
 .env.*
+!.env.example
+
+# OS cruft
+.DS_Store
+Thumbs.db
